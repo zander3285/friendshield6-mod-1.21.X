@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "friendshield",
+	"version": "${version}",
+	"name": "FriendShield",
+	"description": "Лор подъезжает...будь готов!",
+	"authors": [
+		"_zander46_",
+		"Kaupenjoe",
+		"Gemini",
+		"kosinak"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/friendshield/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net._zander46_.friendshield.FriendShield"
+		],
+		"fabric-datagen": [
+			"net._zander46_.friendshield.FriendShieldDataGenerator"
+		]
+	},
+	"mixins": [
+		"friendshield.mixins.json"
+	],
+	"client": [
+		"net._zander46_.friendshield.FriendShieldClient"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
