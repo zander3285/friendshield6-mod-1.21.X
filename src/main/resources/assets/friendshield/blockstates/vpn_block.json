@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "friendshield:block/vpn_block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "friendshield:block/vpn_block",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "friendshield:block/vpn_block"
+    },
+    "facing=west": {
+      "model": "friendshield:block/vpn_block",
+      "y": 90
+    }
+  }
+}
