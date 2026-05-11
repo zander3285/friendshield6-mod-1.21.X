@@ -62,9 +62,11 @@ public class VpnBlock extends BlockWithEntity implements BlockEntityProvider {
         builder.add(FACING);
     }
 
-    //    @Override
-//    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-//        return validateTicker(type, ModBlockEntities.VPN_BE,
-//                (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
-//    }
+        @Override
+    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        if(world.isClient()) return null;
+
+        return validateTicker(type, ModBlockEntities.VPN_BE,
+                (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
+    }
 }

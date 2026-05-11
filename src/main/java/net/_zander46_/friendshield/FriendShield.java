@@ -2,6 +2,7 @@ package net._zander46_.friendshield;
 
 import net._zander46_.friendshield.block.ModBlocks;
 import net._zander46_.friendshield.block.entity.ModBlockEntities;
+import net._zander46_.friendshield.effect.ModEffects;
 import net._zander46_.friendshield.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,5 +18,6 @@ public class FriendShield implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntites();
+		ModEffects.registerEffects();
 	}
 }

@@ -1,4 +1,5 @@
 {
   "item.friendshield.wooden_elytra": "National glider",
-  "block.friendshield.vpn_block": "VPN provider"
+  "block.friendshield.vpn_block": "VPN provider",
+  "effect.friendshield.vpn": "VPN"
 }
