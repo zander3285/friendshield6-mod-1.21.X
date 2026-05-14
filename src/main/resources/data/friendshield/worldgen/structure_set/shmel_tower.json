@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "friendshield:shmel_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 2281488675242,
+    "spacing": 60,
+    "separation": 40
+
+  }
+}
