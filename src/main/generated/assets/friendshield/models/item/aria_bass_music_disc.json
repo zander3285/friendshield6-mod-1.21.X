@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "friendshield:item/aria_bass_music_disc"
+  }
+}

@@ -1,5 +1,7 @@
 {
   "item.friendshield.wooden_elytra": "Отечественный дельтаплан",
   "block.friendshield.vpn_block": "VPN роутер",
-  "effect.friendshield.vpn": "VPN"
+  "effect.friendshield.vpn": "VPN",
+  "item.friendshield.aria_bass_music_disc": "Пластинка",
+  "item.friendshield.aria_bass_music_disc.desc": "C418 - Aria Math (Violin cover)"
 }

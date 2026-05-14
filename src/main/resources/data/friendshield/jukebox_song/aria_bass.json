@@ -1,0 +1,8 @@
+{
+  "comparator_output": 6,
+  "description": {
+    "translate": "item.friendshield.aria_bass_music_disc.desc"
+  },
+  "length_in_seconds": 78.0,
+  "sound_event": "friendshield:aria_bass"
+}

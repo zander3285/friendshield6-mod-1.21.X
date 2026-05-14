@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"FireworkRocketItemMixin",
-		"ClientPlayerEntityMixin"
+		"ClientPlayerEntityMixin",
+		"MobEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

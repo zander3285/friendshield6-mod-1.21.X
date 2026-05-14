@@ -1,0 +1,10 @@
+{
+  "aria_bass": {
+    "sounds": [
+      {
+        "name": "friendshield:aria_bass",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -9,7 +9,12 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
+
 public class ModSounds {
+
+    public static final SoundEvent ARIA_BASS = registerSoundEvent("aria_bass");
+    public static final RegistryKey<JukeboxSong> ARIA_BASS_KEY =
+            RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(FriendShield.MOD_ID, "aria_bass"));
 
         private static SoundEvent registerSoundEvent(String name){
         Identifier id = Identifier.of(FriendShield.MOD_ID, name);

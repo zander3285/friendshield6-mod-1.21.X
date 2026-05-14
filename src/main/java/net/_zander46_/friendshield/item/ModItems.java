@@ -2,6 +2,7 @@ package net._zander46_.friendshield.item;
 
 import net._zander46_.friendshield.FriendShield;
 import net._zander46_.friendshield.ModEquipmentAssets;
+import net._zander46_.friendshield.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
@@ -14,6 +15,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.Unit;
 
 import java.util.function.Function;
@@ -31,6 +33,11 @@ public class ModItems {
                         .repairable(Items.BIRCH_LOG)
 
             ));
+
+    public static final Item ARIA_BASS_MUSIC_DISC = registerItem("aria_bass_music_disc",
+            setting -> new Item(setting.jukeboxPlayable(ModSounds.ARIA_BASS_KEY)
+                    .maxCount(1)
+                    .rarity(Rarity.UNCOMMON)));
 
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {

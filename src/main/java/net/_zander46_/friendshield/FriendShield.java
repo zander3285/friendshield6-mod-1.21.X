@@ -4,6 +4,8 @@ import net._zander46_.friendshield.block.ModBlocks;
 import net._zander46_.friendshield.block.entity.ModBlockEntities;
 import net._zander46_.friendshield.effect.ModEffects;
 import net._zander46_.friendshield.item.ModItems;
+import net._zander46_.friendshield.sound.ModSounds;
+import net._zander46_.friendshield.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -15,9 +17,11 @@ public class FriendShield implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModSounds.registerSounds();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntites();
 		ModEffects.registerEffects();
+		//ModVillagers.registerVillagers();
 	}
 }

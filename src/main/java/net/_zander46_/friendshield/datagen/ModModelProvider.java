@@ -20,6 +20,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.WOODEN_ELYTRA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARIA_BASS_MUSIC_DISC, Models.GENERATED);
+
         //itemModelGenerator.registerWithTextureSource(ModItems.WOODEN_ELYTRA, Models.);
     }
 
