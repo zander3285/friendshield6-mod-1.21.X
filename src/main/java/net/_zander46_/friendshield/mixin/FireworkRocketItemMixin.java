@@ -1,5 +1,6 @@
 package net._zander46_.friendshield.mixin;
 
+import net._zander46_.friendshield.ModCommandManager;
 import net._zander46_.friendshield.item.ModItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,6 +26,7 @@ public class FireworkRocketItemMixin {
     )
     private void preventWoodenElytraBoost(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         // Проверяем, летит ли игрок (так как в оригинале проверка идет первой)
+
         if (user.isGliding()) {
             // Получаем предмет в слоте нагрудника
             ItemStack chestStack = user.getEquippedStack(EquipmentSlot.CHEST);

@@ -1,5 +1,6 @@
 package net._zander46_.friendshield.mixin;
 
+import net._zander46_.friendshield.ModCommandManager;
 import net._zander46_.friendshield.effect.ModEffects;
 import net._zander46_.friendshield.item.ModItems;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -21,6 +22,10 @@ public abstract class ClientPlayerEntityMixin {
 
     @Inject(method = "tickMovement", at = @At(value = "FIELD", target = "Lnet/minecraft/client/network/ClientPlayerEntity;falling:Z", shift = At.Shift.AFTER))
     private void checkWoodenElytraFlightConditions(CallbackInfo ci) {
+        if (!ModCommandManager.isBannedElytraMixinEnabled()) {
+            return; // Просто выходим, оригинальный код Minecraft продолжит работу
+        }
+
         ClientPlayerEntity player = (ClientPlayerEntity) (Object) this;
 
         // Работаем только если игрок сейчас летит на элитрах

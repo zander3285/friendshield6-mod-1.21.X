@@ -1,5 +1,6 @@
 package net._zander46_.friendshield.mixin;
 
+import net._zander46_.friendshield.ModCommandManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -22,6 +23,10 @@ public abstract class MobEntityMixin extends LivingEntity {
     @Inject(method = "tryAttack", at = @At("RETURN"))
     private void explodeOnPhantomAttack(ServerWorld world, Entity target, CallbackInfoReturnable<Boolean> cir) {
         // Проверяем: 1. Успешна ли атака? 2. Является ли атакующий фантомом?
+        if (!ModCommandManager.isExplodingPhantomsMixinEnabled()) {
+            return; // Просто выходим, оригинальный код Minecraft продолжит работу
+        }
+
         if (cir.getReturnValue() && (Object) this instanceof PhantomEntity phantom) {
 
             // Создаем взрыв
@@ -34,6 +39,8 @@ public abstract class MobEntityMixin extends LivingEntity {
                     3.0f,
                     World.ExplosionSourceType.MOB
             );
+
+            phantom.kill(world);
 
             // Если ты хочешь, чтобы фантом исчезал после взрыва (как крипер),
             // расскомментируй строку ниже:
